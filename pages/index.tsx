@@ -1,8 +1,7 @@
-import { Inter } from "@next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import useMap from "hooks/useMap";
 
 export default function Home() {
-  const title = "naver mpas";
-  return <div className="fdsf"></div>;
+  useMap();
+
+  return <div id="map" style={{ width: "100vw", height: "100vh" }}></div>;
 }
