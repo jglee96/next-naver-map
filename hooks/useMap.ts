@@ -16,15 +16,18 @@ const useMap = () => {
       window.alert("현재 위치를 알 수 없어 기본 위치로 지정합니다.");
     }
 
-    mapRef.current = new naver.maps.Map("map", {
-      zoomControl: true,
-    });
+    if (mapRef.current === null)
+      mapRef.current = new naver.maps.Map("map", {
+        zoomControl: true,
+      });
   }, []);
 
   useEffect(() => {
     const { lat, lng } = myCoord;
     mapRef.current?.setCenter(new naver.maps.LatLng(lat, lng));
   }, [myCoord]);
+
+  return mapRef.current;
 };
 
 export default useMap;
