@@ -1,14 +1,19 @@
-import useMap from "hooks/useMap";
-import { useEffect } from "react";
+import HomeContent from "components/home/HomeContent";
+import { MapContext } from "context/MapContext";
+import Map from "model/Map";
+import { useEffect, useRef } from "react";
 
 export default function Home() {
-  const map = useMap();
-  useEffect(() => {
-    const test = (m: naver.maps.Map | null) => {
-      m?.addListener("click", () => console.log("MAP CLICK"));
-    };
-    test(map);
-  }, [map]);
+  const mapRef = useRef<Map | null>(null);
 
-  return <div id="map" style={{ width: "100vw", height: "100vh" }}></div>;
+  useEffect(() => {
+    if (!mapRef.current) mapRef.current = new Map();
+  }, []);
+
+  if (mapRef.current) return <></>;
+  return (
+    <MapContext.Provider value={mapRef.current}>
+      <HomeContent />
+    </MapContext.Provider>
+  );
 }
