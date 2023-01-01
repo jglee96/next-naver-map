@@ -12,6 +12,7 @@ export default function Document() {
           strategy="beforeInteractive"
           src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=ri4ie2matu"
         />
+        <Script src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=ri4ie2matu&submodules=drawing" />
       </body>
     </Html>
   );

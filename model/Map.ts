@@ -1,5 +1,6 @@
 export default class Map {
   map: naver.maps.Map;
+  dm?: naver.maps.drawing.DrawingManager;
   coord: { lat: number; lng: number };
 
   constructor() {
@@ -19,6 +20,9 @@ export default class Map {
     this.map = new naver.maps.Map("map", {
       center: new naver.maps.LatLng(lat, lng),
       zoomControl: true,
+    });
+    naver.maps.Event.once(this.map, "init", () => {
+      this.dm = new naver.maps.drawing.DrawingManager({ map: this.map });
     });
   }
 

@@ -1,4 +1,4 @@
-import HomeContent from "components/home/HomeContent";
+import HomeMap from "components/home/HomeMap";
 import { MapContext } from "context/MapContext";
 import Map from "model/Map";
 import { useEffect, useRef } from "react";
@@ -13,7 +13,7 @@ export default function Home() {
   if (mapRef.current) return <></>;
   return (
     <MapContext.Provider value={mapRef.current}>
-      <HomeContent />
+      <HomeMap />
     </MapContext.Provider>
   );
 }
