@@ -1,2 +1,9 @@
 next-naver-map:
   component: "./node_modules/@sls-next/serverless-component"
+  inputs:
+    domain: ["jglee96", "next-naver-map.com"]
+    bucketName: "${git:respository}-${git:branch}"
+    bucketRegion: "ap-northeast-2"
+    cloudfront:
+      distributionId: "E2B9MM2R71R0UC"
+      comment: "next deploy"
