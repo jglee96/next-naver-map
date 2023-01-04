@@ -1,2 +1,2 @@
 next-naver-map:
-  component: "@sls-next/serverless-component"
+  component: "./node_modules/@sls-next/serverless-component"
