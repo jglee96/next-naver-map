@@ -1,22 +1,22 @@
 import HomeMap from "components/home/HomeMap";
 import { MapContext } from "context/MapContext";
 import Map from "model/Map";
-import { useRef } from "react";
+import { useState } from "react";
 import Script from "next/script";
 
 export default function Home() {
-  const mapRef = useRef<Map | null>(null);
+  const [map, setMap] = useState<Map>();
 
-  if (mapRef.current) return <></>;
   return (
     <>
       <Script
         src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=ri4ie2matu"
         onLoad={() => {
-          mapRef.current = new Map();
+          setMap(new Map());
         }}
       />
-      <MapContext.Provider value={mapRef.current}>
+      <h1>Home</h1>
+      <MapContext.Provider value={map}>
         <HomeMap />
       </MapContext.Provider>
     </>
