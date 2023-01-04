@@ -8,7 +8,6 @@ next-naver-map:
   inputs:
     domain: ["jglee96", "next-naver-map.com"]
     bucketName: "next-naver-map-${self:custom.gitBranch}"
-    bucketRegion: "ap-northeast-2"
     cloudfront:
       distributionId: "E2B9MM2R71R0UC"
       comment: "next deploy"
