@@ -1,13 +1,4 @@
-plugins:
-  - serverless-git-info
-
-custom:
-  gitBranch: ${git:branch}
-
 next-naver-map:
+  component: "./node_modules/@sls-next/serverless-component"
   inputs:
     domain: ["jglee96", "next-naver-map.com"]
-    bucketName: "next-naver-map-${self:custom.gitBranch}"
-    cloudfront:
-      distributionId: "E2B9MM2R71R0UC"
-      comment: "next deploy"
