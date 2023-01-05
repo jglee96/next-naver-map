@@ -1,2 +1,5 @@
 next-naver-map:
   component: "./node_modules/@sls-next/serverless-component"
+  inputs:
+    cloudfront:
+      distributionId: E2B9MM2R71R0UC
