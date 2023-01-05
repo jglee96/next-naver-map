@@ -1,4 +1,2 @@
 next-naver-map:
   component: "./node_modules/@sls-next/serverless-component"
-  inputs:
-    domain: ["jglee96", "next-naver-map.com"]
