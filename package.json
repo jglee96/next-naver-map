@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "components-v1"
+    "deploy": "serverless"
   },
   "dependencies": {
     "next": "^11.1.4",
@@ -16,8 +16,7 @@
     "typescript": "4.9.4"
   },
   "devDependencies": {
-    "@serverless/cli": "^1.6.0",
-    "@sls-next/serverless-component": "^3.7.0",
+    "@sls-next/serverless-component": "^2.72.2",
     "@types/navermaps": "^3.6.1",
     "@types/node": "16.11.7",
     "@types/react": "17.0.2",
