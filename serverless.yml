@@ -1,5 +1,18 @@
 next-naver-map:
   component: "./node_modules/@sls-next/serverless-component"
   inputs:
+    bucketName: next-naver-map-${stage}
     cloudfront:
       distributionId: E2B9MM2R71R0UC
+    runtime:
+      defaultLambda: "nodejs16.x"
+      apiLambda: "nodejs16.x"
+      imageLambda: "nodejs16.x"
+    timeout:
+      defaultLambda: 10
+      apiLambda: 10
+      imageLambda: 10
+    name:
+      defaultLambda: next-naver-map-${stage}-defaultLambda
+      apiLambda: next-naver-map-${stage}-apiLambda
+      imageLambda: next-naver-map-${stage}-imageLambda

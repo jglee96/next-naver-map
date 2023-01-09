@@ -27,4 +27,4 @@ jobs:
 
       - name: Deploy Next.js app
         run: |
-          npm run deploy
+          npm run deploy --stage "$GITHUB_BASE_REF"
